@@ -1,0 +1,1410 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CompanyProject",
+    "dateExported": "2023-11-20T08:48:53.783Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "96b4e5d0-2725-4a7b-94b9-c8c242c187de",
+            "name": "Employee",
+            "containerId": "",
+            "created": "2023-11-17T09:45:08.668Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "post",
+            "containerId": "96b4e5d0-2725-4a7b-94b9-c8c242c187de",
+            "created": "2023-11-17T09:56:34.676Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "8bc75943-4507-4a26-87a7-4ff367437d10",
+            "name": "Company",
+            "containerId": "",
+            "created": "2023-11-17T11:14:03.816Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "post",
+            "containerId": "8bc75943-4507-4a26-87a7-4ff367437d10",
+            "created": "2023-11-17T11:14:03.817Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "0f2795e5-7ae4-4369-a284-b0692502e55e",
+            "name": "get",
+            "containerId": "96b4e5d0-2725-4a7b-94b9-c8c242c187de",
+            "created": "2023-11-17T09:56:46.543Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "b80ccfbb-fdd3-4b3c-8215-74cf82d077f9",
+            "name": "get",
+            "containerId": "8bc75943-4507-4a26-87a7-4ff367437d10",
+            "created": "2023-11-17T11:14:03.818Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "f932a3d5-5019-49a1-be3e-bd56dee93396",
+            "name": "delete",
+            "containerId": "96b4e5d0-2725-4a7b-94b9-c8c242c187de",
+            "created": "2023-11-17T11:10:20.700Z",
+            "sortNum": 35000
+        },
+        {
+            "_id": "fa808b9d-4483-42c4-89a1-730c8b95befb",
+            "name": "delete",
+            "containerId": "8bc75943-4507-4a26-87a7-4ff367437d10",
+            "created": "2023-11-17T11:14:03.819Z",
+            "sortNum": 35000
+        },
+        {
+            "_id": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "update",
+            "containerId": "96b4e5d0-2725-4a7b-94b9-c8c242c187de",
+            "created": "2023-11-17T10:51:30.234Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "update",
+            "containerId": "8bc75943-4507-4a26-87a7-4ff367437d10",
+            "created": "2023-11-17T11:14:03.820Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "27377d95-65d2-4345-9dc7-5e43e920c1d4",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeOK",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-17T09:45:21.660Z",
+            "modified": "2023-11-20T08:18:12.592Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prujjjba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "37ab2d0a-fd07-4f96-b342-9364eb75eb29",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "addCompanyOK",
+            "url": "{{ip}}/api/company",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-17T11:14:03.816Z",
+            "modified": "2023-11-20T08:29:27.718Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheck\",\n  \"address\":\"Calle 2\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "81d59a66-6910-449d-a2e4-dc1d316d0bdd",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 11250,
+            "created": "2023-11-18T15:03:43.087Z",
+            "modified": "2023-11-20T08:19:31.591Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "94fa0167-97e6-4819-a68a-db87ac65d763",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO4",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 11875,
+            "created": "2023-11-18T15:03:45.981Z",
+            "modified": "2023-11-20T08:19:35.095Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "47bd7527-e959-4efb-88c1-c72d22e2fb0d",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO3",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 12500,
+            "created": "2023-11-18T15:03:14.373Z",
+            "modified": "2023-11-20T08:19:38.295Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8cfe00b2-31fa-45e7-bc5f-f49abe2e7045",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKOBadGender",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 15000,
+            "created": "2023-11-18T15:02:13.681Z",
+            "modified": "2023-11-20T08:19:41.099Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"X\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "9fb4a342-8e9d-4c2f-a37e-467ff8d22f2d",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-17T09:53:59.547Z",
+            "modified": "2023-11-20T08:19:43.730Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "83d1c60e-dee2-4f71-a2ca-716b1d46f167",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "0f2795e5-7ae4-4369-a284-b0692502e55e",
+            "name": "getEmployees",
+            "url": "{{ip}}/api/employee",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-17T09:56:57.969Z",
+            "modified": "2023-11-20T08:20:00.875Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "529cda4b-e3da-4fc8-bb8f-9fa7745b62d8",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "addCompanyKO",
+            "url": "{{ip}}/api/company",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-17T11:14:03.817Z",
+            "modified": "2023-11-20T08:20:44.453Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"address\":\"De La rosa, 2\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "1f4b1bd9-c26c-41e7-8edc-5edc09ebf72d",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "b80ccfbb-fdd3-4b3c-8215-74cf82d077f9",
+            "name": "getCompanies",
+            "url": "{{ip}}/api/company",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-17T11:14:03.820Z",
+            "modified": "2023-11-20T08:42:25.378Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "73f746db-621e-4cda-bb5a-337131cc8c7b",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO1",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 22500,
+            "created": "2023-11-18T15:01:23.911Z",
+            "modified": "2023-11-20T08:19:46.418Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "fbf448d7-c86c-441c-a5ee-3e66ff990d73",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKO2",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-11-18T15:01:20.660Z",
+            "modified": "2023-11-20T08:19:49.225Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "112b213e-65a5-4114-b010-f565aef722e3",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "addCompanyKO2",
+            "url": "{{ip}}/api/company",
+            "method": "POST",
+            "sortNum": 25000,
+            "created": "2023-11-18T15:12:12.888Z",
+            "modified": "2023-11-20T08:20:47.622Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheck\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "a09b68d6-b373-4887-b90c-5065b8799e65",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "addCompanyKO3",
+            "url": "{{ip}}/api/company",
+            "method": "POST",
+            "sortNum": 27500,
+            "created": "2023-11-18T15:12:42.990Z",
+            "modified": "2023-11-20T08:20:53.575Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheck\",\n  \"address\":\"De La rosa, 2\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "\"Invalid value\""
+                }
+            ]
+        },
+        {
+            "_id": "e6ba1e5b-cca7-432b-b039-47d7d1822f98",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKOBadEmail",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-17T09:55:16.809Z",
+            "modified": "2023-11-20T08:19:53.908Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prue@ba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "email"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Invalid value"
+                }
+            ]
+        },
+        {
+            "_id": "aece0ce3-025f-4b18-9dfe-6174c235f1ff",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "0f2795e5-7ae4-4369-a284-b0692502e55e",
+            "name": "getEmployeeOK",
+            "url": "{{ip}}/api/employee/655b06601853b8939f512afa",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-17T10:47:34.057Z",
+            "modified": "2023-11-20T08:20:04.294Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "5a57c6df-fd20-4a60-9ba1-ecb175467b36",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeOK",
+            "url": "{{ip}}/api/employee/655b1535a430cd735955bb57",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-11-17T10:51:41.618Z",
+            "modified": "2023-11-20T08:20:17.019Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePruebaMod\",\n  \"lastName\":\"ApellidoPruebaMod\",\n  \"email\":\"pruebas2@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "039eeef9-c6dd-4aa4-b817-91db036880c3",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "f932a3d5-5019-49a1-be3e-bd56dee93396",
+            "name": "deleteEmployeeOK",
+            "url": "{{ip}}/api/employee/655b1484a65c58d1242f1fcc",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-11-17T11:10:20.701Z",
+            "modified": "2023-11-20T08:20:10.647Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "c9887399-17c5-4a5d-8cb3-769ff4966296",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "1437f443-b3fb-4139-8aa8-0bf7ba9f765d",
+            "name": "addCompanyKOBadAddress",
+            "url": "{{ip}}/api/company",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-17T11:14:03.818Z",
+            "modified": "2023-11-20T08:33:07.907Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheck\",\n  \"address\":2,\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "address"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Invalid value"
+                }
+            ]
+        },
+        {
+            "_id": "cfe2f66f-32b4-4f7e-8b59-5a43bc62cf97",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "b80ccfbb-fdd3-4b3c-8215-74cf82d077f9",
+            "name": "getCompanyOK",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-17T11:14:03.821Z",
+            "modified": "2023-11-20T08:42:30.162Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "5b0aaed9-015f-42e6-a408-8cbe339fa5d3",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "fa808b9d-4483-42c4-89a1-730c8b95befb",
+            "name": "deleteCompanyOK",
+            "url": "{{ip}}/api/company/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-11-17T11:14:03.823Z",
+            "modified": "2023-11-20T08:42:37.628Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "283fbf6d-4c10-4bc2-8e5e-5f45b7fee091",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "editCompanyOK",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-11-17T11:14:03.825Z",
+            "modified": "2023-11-20T08:42:45.612Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheckMod\",\n  \"address\":\"De La rosa, 2\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "a266bd74-64c5-4287-ac44-1bff4be0a446",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "e55b511d-e5e8-4571-8bb2-4d16d0fbf22e",
+            "name": "addEmployeeKOBadIdCompany",
+            "url": "{{ip}}/api/employee",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-11-17T09:55:51.741Z",
+            "modified": "2023-11-20T08:19:57.116Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"malfecha\",\n  \"idCompany\":\"1\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "dateOfBirth"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Invalid value"
+                }
+            ]
+        },
+        {
+            "_id": "e317ce06-0116-49b0-89cc-0b05ed764ab0",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "0f2795e5-7ae4-4369-a284-b0692502e55e",
+            "name": "getEmployeeKO",
+            "url": "{{ip}}/api/employee/noexist",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-17T10:48:20.545Z",
+            "modified": "2023-11-20T08:20:07.631Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                }
+            ]
+        },
+        {
+            "_id": "757611b9-ec18-4856-826d-6fe452835857",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOIncompleteBody",
+            "url": "{{ip}}/api/employee/655b1535a430cd735955bb57",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-17T11:02:36.377Z",
+            "modified": "2023-11-20T08:20:19.883Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"lastName\":\"ApellidoPruebaMod\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "7fd38ca0-d63d-4004-a848-4cd31fe88ef2",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "f932a3d5-5019-49a1-be3e-bd56dee93396",
+            "name": "deleteEmployeeKO",
+            "url": "{{ip}}/api/employee/noexist",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-17T11:10:20.702Z",
+            "modified": "2023-11-20T08:20:13.361Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e31b4d2b-8afc-4fd9-9f67-15b4a08cc805",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "b80ccfbb-fdd3-4b3c-8215-74cf82d077f9",
+            "name": "getCompanyKO",
+            "url": "{{ip}}/api/company/noexist",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-17T11:14:03.822Z",
+            "modified": "2023-11-20T08:42:32.812Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "c640926b-a9dd-4d46-b031-1ce45998a99e",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "fa808b9d-4483-42c4-89a1-730c8b95befb",
+            "name": "deleteCompanyKO",
+            "url": "{{ip}}/api/employee/noexist",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-17T11:14:03.824Z",
+            "modified": "2023-11-20T08:42:40.954Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e28d2d77-b9ce-4829-a4f0-e521d77bf76f",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "editCompanyKOIncompleteBody",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-17T11:14:03.826Z",
+            "modified": "2023-11-20T08:42:49.147Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\":\"De La rosa, 2\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "106733e0-567b-4eb7-a1bc-95511289fda2",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOIncompleteBody2",
+            "url": "{{ip}}/api/employee/655b1535a430cd735955bb57",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-11-18T15:05:30.185Z",
+            "modified": "2023-11-20T08:20:23.643Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePruebaMod\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "21cf64ac-e61d-4bdc-bcc7-f89a8af1c5eb",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "editCompanyKOIncompleteBody2",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-11-18T15:13:18.164Z",
+            "modified": "2023-11-20T08:42:53.105Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"address\":\"De La rosa, 2\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "84e58574-5483-4313-8097-9c0f96778c49",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOIncompleteBody3",
+            "url": "{{ip}}/api/employee/prueba@prueba.com",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2023-11-18T15:06:00.022Z",
+            "modified": "2023-11-20T08:20:26.681Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePruebaMod\",\n  \"lastName\":\"ApellidoPruebaMod\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "3c805868-ecbd-439e-9eb7-ca4a0b07b02a",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "editCompanyKOIncompleteBody3",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2023-11-18T15:13:56.922Z",
+            "modified": "2023-11-20T08:42:56.229Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\":1,\n  \"name\":\"CompanyCheck\",\n  \"city\":\"Sevilla\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "90e38046-d70f-4fdc-95fe-788d60b0e739",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOIncompleteBody4",
+            "url": "{{ip}}/api/employee/prueba@prueba.com",
+            "method": "PUT",
+            "sortNum": 57500,
+            "created": "2023-11-18T15:06:18.011Z",
+            "modified": "2023-11-20T08:20:30.262Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePruebaMod\",\n  \"lastName\":\"ApellidoPruebaMod\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "77e141cf-7ddc-4628-82b0-febe8e86dda1",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "ee702ca2-960c-484f-b9b7-4413e1351fbb",
+            "name": "editCompanyKOIncompleteBody4",
+            "url": "{{ip}}/api/company/655b19cedd59803169e4e899",
+            "method": "PUT",
+            "sortNum": 57500,
+            "created": "2023-11-18T15:14:11.610Z",
+            "modified": "2023-11-20T08:42:59.180Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"address\":\"De La rosa, 2\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "fda083e2-6928-441b-b792-ada8e92c4ca9",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOIncompleteBody5",
+            "url": "{{ip}}/api/employee/prueba@prueba.com",
+            "method": "PUT",
+            "sortNum": 58750,
+            "created": "2023-11-18T15:11:02.710Z",
+            "modified": "2023-11-20T08:20:32.997Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePruebaMod\",\n  \"lastName\":\"ApellidoPruebaMod\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "a0c47e06-6544-4224-8d79-b00da1dfee91",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOBadEmail",
+            "url": "{{ip}}/api/employee/prueba@prue@ba.com",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2023-11-17T11:08:59.537Z",
+            "modified": "2023-11-20T08:20:35.922Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prue@ba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"1992-07-20\",\n  \"idCompany\":1\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "email"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Invalid value"
+                }
+            ]
+        },
+        {
+            "_id": "23a3093d-739f-42ff-bb9f-a83dbd37a089",
+            "colId": "6cfedd5e-12f8-4561-9f86-e3ba1bfab0a7",
+            "containerId": "c709da4b-ae3e-456a-8d3d-3f044893ef52",
+            "name": "editEmployeeKOBadIdCompany",
+            "url": "{{ip}}/api/employee/prueba@prue@ba.com",
+            "method": "PUT",
+            "sortNum": 70000,
+            "created": "2023-11-17T11:09:33.730Z",
+            "modified": "2023-11-20T08:20:38.326Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"firstName\":\"NombrePrueba\",\n  \"lastName\":\"ApellidoPrueba\",\n  \"email\":\"prueba@prueba.com\",\n  \"gender\":\"H\",\n  \"dateOfBirth\":\"malfecha\",\n  \"idCompany\":\"1\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "dateOfBirth"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "Invalid value"
+                }
+            ]
+        }
+    ]
+}

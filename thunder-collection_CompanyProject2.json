@@ -1,0 +1,476 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "CompanyProject2",
+    "dateExported": "2023-11-20T08:48:59.100Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "af75475b-848d-4739-aa90-27187a5d6204",
+            "name": "Project",
+            "containerId": "",
+            "created": "2023-11-18T15:18:53.325Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "bc7b7915-b5c3-464c-902a-00b85ccddbd8",
+            "name": "post",
+            "containerId": "af75475b-848d-4739-aa90-27187a5d6204",
+            "created": "2023-11-18T15:18:53.328Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "e7155a98-bf5b-41c1-aaef-4ce34938af82",
+            "name": "get",
+            "containerId": "af75475b-848d-4739-aa90-27187a5d6204",
+            "created": "2023-11-18T15:18:53.331Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "d5bcdd75-1c3b-4a97-b284-b1f6fc4bd2d1",
+            "name": "delete",
+            "containerId": "af75475b-848d-4739-aa90-27187a5d6204",
+            "created": "2023-11-18T15:18:53.334Z",
+            "sortNum": 35000
+        },
+        {
+            "_id": "acdc3d89-11db-4671-bfc1-acb06aee21e2",
+            "name": "update",
+            "containerId": "af75475b-848d-4739-aa90-27187a5d6204",
+            "created": "2023-11-18T15:18:53.337Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "bc749a51-ccc8-4a7f-9505-946df0574139",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "bc7b7915-b5c3-464c-902a-00b85ccddbd8",
+            "name": "addProjectOK",
+            "url": "{{ip}}/api/project",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-18T15:18:53.329Z",
+            "modified": "2023-11-20T08:43:18.471Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"id\":1,\n  \"name\":\"Proyecto1\",\n  \"budget\": 15000\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8cf11044-5068-4b82-81f8-282bfbc987c4",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "bc7b7915-b5c3-464c-902a-00b85ccddbd8",
+            "name": "addProjectKO",
+            "url": "{{ip}}/api/project",
+            "method": "POST",
+            "sortNum": 11250,
+            "created": "2023-11-18T15:18:53.329Z",
+            "modified": "2023-11-20T08:47:59.987Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"name\":\"Proyecto1\",\n  \"budget\": 15000\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "7c6d629d-59c2-4a15-8c53-2462e2de3847",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "bc7b7915-b5c3-464c-902a-00b85ccddbd8",
+            "name": "addProjectKO4",
+            "url": "{{ip}}/api/project",
+            "method": "POST",
+            "sortNum": 11875,
+            "created": "2023-11-18T15:18:53.329Z",
+            "modified": "2023-11-20T08:48:03.989Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"id\":1,\n  \"budget\": 15000\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "8f984c05-5793-45ce-a50d-07834346af0b",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "bc7b7915-b5c3-464c-902a-00b85ccddbd8",
+            "name": "addProjectKO3",
+            "url": "{{ip}}/api/project",
+            "method": "POST",
+            "sortNum": 12500,
+            "created": "2023-11-18T15:18:53.329Z",
+            "modified": "2023-11-20T08:48:07.497Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"id\":1,\n  \"name\":\"Proyecto1\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "notequal",
+                    "value": "201"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "24b8e75a-70f8-41db-9018-3b0dd62bb6a1",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "e7155a98-bf5b-41c1-aaef-4ce34938af82",
+            "name": "getProjects",
+            "url": "{{ip}}/api/project",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-11-18T15:18:53.332Z",
+            "modified": "2023-11-20T08:48:18.369Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e1ee72e1-1896-4294-a164-f535e0fe4375",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "e7155a98-bf5b-41c1-aaef-4ce34938af82",
+            "name": "getProjectOK",
+            "url": "{{ip}}/api/project/655b1c20d8e8272f5b4c7604",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-11-18T15:18:53.332Z",
+            "modified": "2023-11-20T08:48:21.858Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "9ac25e43-8cc0-465d-bb50-a4637295563e",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "d5bcdd75-1c3b-4a97-b284-b1f6fc4bd2d1",
+            "name": "deleteProjectOK",
+            "url": "{{ip}}/api/project/655b1c20d8e8272f5b4c7604",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-11-18T15:18:53.335Z",
+            "modified": "2023-11-20T08:48:29.524Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "70de25ea-fe37-46d6-bfcf-669789b97454",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "acdc3d89-11db-4671-bfc1-acb06aee21e2",
+            "name": "editProjectOK",
+            "url": "{{ip}}/api/project/655b1cbe021765a9bca3402d",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-11-18T15:18:53.340Z",
+            "modified": "2023-11-20T08:48:37.986Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"id\":1,\n  \"name\":\"Proyecto1\",\n  \"budget\": 15000\n}\n",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "e745a11d-bbaa-43e4-9662-ba15c0d1d5cd",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "e7155a98-bf5b-41c1-aaef-4ce34938af82",
+            "name": "getProjectKO",
+            "url": "{{ip}}/api/project/noexist",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-11-18T15:18:53.332Z",
+            "modified": "2023-11-20T08:48:25.888Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "cddba92c-ab79-4628-9edf-02e8e1e823ad",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "d5bcdd75-1c3b-4a97-b284-b1f6fc4bd2d1",
+            "name": "deleteProjectKO",
+            "url": "{{ip}}/api/project/noexist",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-11-18T15:18:53.335Z",
+            "modified": "2023-11-20T08:48:32.927Z",
+            "headers": [],
+            "params": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "404"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "28e68e7a-06c0-4297-baa8-6395ba54d3d6",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "acdc3d89-11db-4671-bfc1-acb06aee21e2",
+            "name": "editProjectKOIncompleteBody",
+            "url": "{{ip}}/api/project/655b1cbe021765a9bca3402d",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-11-18T15:18:53.340Z",
+            "modified": "2023-11-20T08:47:52.687Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"name\":\"Proyecto1\"\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "4ddc36ea-c6d2-40a3-9d77-f8cc31d74ec6",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "acdc3d89-11db-4671-bfc1-acb06aee21e2",
+            "name": "editProjectKOIncompleteBody2",
+            "url": "{{ip}}/api/project/655b1cbe021765a9bca3402d",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-11-18T15:18:53.340Z",
+            "modified": "2023-11-20T08:47:49.489Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n  \"budget\": 15000\n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        },
+        {
+            "_id": "4d9fbbb4-391f-422c-b430-9b7631b1bf05",
+            "colId": "0e59cd26-3be1-4f11-bb1b-f951df9c81d2",
+            "containerId": "acdc3d89-11db-4671-bfc1-acb06aee21e2",
+            "name": "editProjectKOIncompleteBody3",
+            "url": "{{ip}}/api/project/655b1cbe021765a9bca3402d",
+            "method": "PUT",
+            "sortNum": 55000,
+            "created": "2023-11-18T15:18:53.340Z",
+            "modified": "2023-11-20T08:47:46.672Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{   \n}",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "400"
+                },
+                {
+                    "type": "res-body",
+                    "custom": "",
+                    "action": "isjson",
+                    "value": "true"
+                }
+            ]
+        }
+    ]
+}
